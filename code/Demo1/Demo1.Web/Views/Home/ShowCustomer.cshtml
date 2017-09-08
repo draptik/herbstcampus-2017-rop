@@ -1,0 +1,21 @@
+﻿@using Vereyon.Web
+@model Demo1.Backend.Domain.Customer
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@Html.RenderFlashMessages()
+
+<h2>Customer</h2>
+
+@Html.LabelFor(x => x.Id)
+@Html.DisplayFor(x => x.Id)
+
+@Html.LabelFor(x => x.Name)
+@Html.DisplayFor(x => x.Name)
+
+@Html.LabelFor(x => x.IsPremiumMember)
+@Html.DisplayFor(x => x.IsPremiumMember)
+
+

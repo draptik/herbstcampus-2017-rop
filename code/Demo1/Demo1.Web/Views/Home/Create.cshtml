@@ -1,0 +1,29 @@
+﻿@using Vereyon.Web
+@model Demo1.Backend.ViewModels.CreateCustomerViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Railway Oriented Programming</h1>
+    <p class="lead">Railway Oriented Programming can help you write maintainable code. It's a tool, not a silver bullet.</p>
+</div>
+<div>
+    @Html.RenderFlashMessages()
+    @using (Html.BeginForm())
+    {
+        <fieldset>
+            <legend>Register now!</legend>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Name)
+            </div>
+
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Name)
+            </div>
+
+            <input type="submit" value="Register now"/>
+        </fieldset>
+    }
+</div>
